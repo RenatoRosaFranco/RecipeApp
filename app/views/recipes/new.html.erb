@@ -6,12 +6,14 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="col-md-7 col-md-offset-2">
-					<div class="jumbotron text-center">
+					<div class="jumbotron text-center" style='border-bottom-left-radius: 0px;
+					border-bottom-right-radius: 0px;'>
 						<i class="fas fa-camera" style='font-size: 36px; color: #a3a090;'></i><br>
 						<span style='color: #a3a090;'>Enviar Foto</span><br>
 						<small style='color: #a3a090;'>"Use apenas foto que você tirou"</small>
 					</div>
-					<div class="panel panel-default" style='padding: 10px; margin-top: -30px;'>
+					<div class="panel panel-default" style='padding: 10px; margin-top: -30px;
+					border-top-left-radius: 0px; border-top-right-radius: 0px;'>
 						
 						<div class='field' style='margin-bottom: 8px;'>
 							<span class='badge'>
@@ -35,7 +37,7 @@
 							placeholder: 'Conte a história desta receita...', required: 'required' %>
 						</div>
 						<div class="field">
-							<%= f.label :ingredients, 'Instruções' %>
+							<%= f.label :instructions, 'Instruções' %>
 							<%= f.text_area :title, class: 'form-control', required: 'required',
 							placeholder: 'Conte a história desta receita...', required: 'required' %>
 						</div>
@@ -54,18 +56,18 @@
 		</div>
 	</div>
 	<div id="bottom-actions" style='background-color: #FFF; padding: 10px; 
-	position: fixed; bottom: 0px;'>
+	position: fixed; bottom: 0px; border-top: 3px solid #EEE; width: 100%;'>
 		<div class="container">
 			<div class="col-md-12">
 				<div class='col-md-7 col-md-offset-2'>
 					<%= f.submit 'Publicar', 
 					class: 'btn btn-primary btn-lg top',
-					style: 'margin-left: 30px;' %>
+					style: 'margin-left: -10px;' %>
 					
 					<div class='text-right' style='display: inline-block; float: right;'>	
 					<%= link_to '#', class: 'text-right' do %>
 						<i class='fas fa-ellipsis-h' style='color: #999; font-size: 28px;
-						padding-top: 10px; margin-right: -30px;'></i>
+						padding-top: 10px; margin-right: 0px;'></i>
 					<% end %>
 					</div>
 				</div>
