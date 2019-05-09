@@ -1,0 +1,29 @@
+<% provide :title, 'Home' %>
+
+<section id="presenter" class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1>cookApp</h1>
+				
+				<%= form_for :search do |f| %>
+						<div class='col-md-6 col-md-offset-3'>
+							<div class='col-md-8'>
+								<%= f.search_field :q, class: 'form-control',
+								required: 'required', placeholder: 'Ingrediente, Receita...' %>
+							</div>
+							<div class='col-md-4'>
+								<%= f.submit 'Pesquisar Receitas', class: 'btn btn-primary btn-lg top' %>
+							</div>
+						</div>
+				<% end %>
+				
+				<div class="col-md-12">
+					<%= button_to 'Criar Receita', new_recipe_path, 
+					class: 'btn btn-primary btn-lg top', method: :get %>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
