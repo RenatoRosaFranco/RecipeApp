@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.0'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -22,6 +22,8 @@ gem 'jquery-rails'
 gem 'factory_bot_rails'
 gem 'rspec-rails'
 gem 'rails_admin'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

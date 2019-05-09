@@ -7,4 +7,5 @@ class Category < ApplicationRecord
 
 	has_many :categories, dependent: :destroy
   belongs_to :category, optional: true
+  belongs_to :user
 end
