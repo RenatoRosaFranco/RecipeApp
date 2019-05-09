@@ -7,8 +7,22 @@
 			 <h2 class='bold'>Categorias</h2>
 			 <br>
 
-			 <div class='panel panel-default'>
+			 <div class='col-md-12 panel panel-default' style='padding: 20px;'>
+					<% Category.main_category.each do |category| %>
+					<div class='col-md-3'>
+						<h2 class='bold'><%= category.name %></h2>
+						<hr>
 
+						<ul class="list-unstyled">
+							<% category.categories.each do |subcategory| %>
+							<li style='margin-top: 5px; margin-bottom: 5px;'>
+								<%= image_tag('', style: 'width: 44px; height: 44px;')%>
+								<%= link_to subcategory.name, recipes_path(category: subcategory.name) %>
+							</li>
+							<% end %>
+						</ul>
+					</div>
+					<% end %>
 			 </div>
 			</div>
 		</div>

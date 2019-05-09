@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home {
 	#presenter {
+		position: relative;
+		margin-top: -20px;
+
 		.input-group-addon {
 			position: relative;
 			background-color: #FFF;
