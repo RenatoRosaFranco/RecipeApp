@@ -1,0 +1,20 @@
+.recipes {
+	form {
+		input[type=text], textarea {
+		 position: relative;
+		 background-color: #FFF;
+		 border: 0px;
+		 resize: none;
+		 &::-webkit-input-placeholder {
+		 	position: relative;
+		 	font-weight: bold;
+		 	color: #999;
+		 }
+		 &.over, &:hover {
+		 	position: relative;
+		 	background-color: #EEE;
+
+		 }
+		}
+	}
+}
