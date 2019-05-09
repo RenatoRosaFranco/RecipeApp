@@ -1,5 +1,5 @@
 <header>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -17,7 +17,18 @@
       <ul class="nav navbar-nav">
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+        	<div class='input-group'>
+        		<div class='input-group-addon'>
+        			<i class='glyphicon glyphicon-search'></i>
+        		</div>
+         		<input type="text" class="form-control" placeholder="Ingrediente, Receita...">
+        	</div>
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right" style='margin-right: 0px !important;'>
       	<% if current_user %>
       	<li>
 					<%= link_to new_recipe_path do %>

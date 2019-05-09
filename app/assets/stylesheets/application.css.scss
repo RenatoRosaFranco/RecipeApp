@@ -22,9 +22,34 @@
  }
  
  .navbar-default {
- 	position: relative;
  	background-color: #FFF;
  	border-bottom: 0px;
+ 	border-bottom: 1px solid #EEE;
+	
+	a {
+	 position: relative;
+	 color: #a3a090 !important;
+	}
+
+ 	.navbar-brand {
+ 	 position: relative;
+ 	 margin-left: 0px !important;
+ 	 font-size: 25px;;
+ 	 font-weight: bold;
+ 	}
+
+ 	.input-group-addon {
+ 	 position: relative;
+ 	 background-color: #FFF;
+ 	 border-right: 0px;
+ 	}
+
+ 	form {
+ 		input[type=text]{
+ 		 position: relative;
+ 		 border-left: 0px;
+ 		}
+ 	}
  }
 
  .bold {
