@@ -1,29 +1,73 @@
 <% provide :title, 'Home' %>
 
-<section id="presenter" class="jumbotron">
+<section id="presenter" class="jumbotron" style='background-color: #FFF;'>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1>cookApp</h1>
+				<h1 style='margin-bottom: 30px; margin-top: -10px;'>cookApp</h1>
 				
 				<%= form_for :search do |f| %>
 						<div class='col-md-6 col-md-offset-3'>
 							<div class='col-md-8'>
-								<%= f.search_field :q, class: 'form-control',
-								required: 'required', placeholder: 'Ingrediente, Receita...' %>
+								<div class='input-group'>
+									<div class='input-group-addon'>
+										<i class='glyphicon glyphicon-search'></i>
+									</div>
+										<%= f.search_field :q, class: 'form-control',
+										required: 'required', placeholder: 'Ingrediente, Receita...',
+										style: 'height: 44px; width: 310px;' %>
+									</div>
 							</div>
 							<div class='col-md-4'>
-								<%= f.submit 'Pesquisar Receitas', class: 'btn btn-primary btn-lg top' %>
+								<%= f.submit 'Pesquisar Receitas', class: 'btn btn-default btn-lg top' %>
 							</div>
 						</div>
 				<% end %>
 				
-				<div class="col-md-12">
-					<%= button_to 'Criar Receita', new_recipe_path, 
-					class: 'btn btn-primary btn-lg top', method: :get %>
+				<div class='col-md-12' style='padding-top: 15px; padding-bottom: 15px;'>
+					<ul class="list-unstyled list-inline">
+						<li><%= link_to 'pastel', recipes_path(category: 'pastel') %></li>
+						<li><%= link_to 'beringela', recipes_path(category: 'beringela') %></li>
+						<li><%= link_to 'bolo de milho', recipes_path(category: 'bolo de milho') %></li>
+						<li><%= link_to 'maionese', recipes_path(category: 'maionese') %></li>
+						<li><%= link_to 'brigadeiro', recipes_path(category: 'brigadeiro') %></li>
+						<li><%= link_to 'milho', recipes_path(category: 'milho') %></li> |
+						<li><%= link_to 'categorias', recipes_path(category: 'milho') %></li> 
+					</ul>
 				</div>
 
+				<div class="col-md-12">
+					<%= button_to 'Criar Receita', new_recipe_path, 
+					class: 'btn btn-success btn-lg top', method: :get %>
+				</div>
 			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container">
+	<div class="row">
+		<div class="col-md-12">
+			
+			<% for i in 1..12 %>
+				<div class="col-md-3">
+					 <div class="panel panel-default">
+					 		<div class='jumbotron' style='margin-bottom: 0px; height: 160px; padding: 15px;'>	
+					 			 <%= link_to '', class: 'pull-left' do %>
+										Save
+					 			 <% end %>
+
+					 			 <%= link_to '', class: 'pull-right' do %>
+										Bookmark
+					 			 <% end %>
+					 		</div>
+					 		<ul class="list-unstyled" style='padding: 10px;'>
+					 			<li><h3 style='font-weight: bold;'><%= link_to 'Pimentão com gorgonzola', recipe_path(i) %></h3></li>
+					 			<li><p>por <%= link_to 'Renato Franco', members_path %>  30 Minutos</p></li>
+					 		</ul>
+					 </div>
+				</div>
+			<% end %>		
 		</div>
 	</div>
 </section>
