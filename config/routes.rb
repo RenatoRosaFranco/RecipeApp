@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :recipes
   resources :members
+  resources :categories
 end

@@ -1,3 +1,20 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home {
+	#presenter {
+		.input-group-addon {
+			position: relative;
+			background-color: #FFF;
+			border-right: 0px;
+			i {
+				position: relative;
+				font-size: 20px;
+			}
+		}
+		input[type=search] {
+		 position: relative;
+		 border-left: 0px;
+		}
+	}
+}

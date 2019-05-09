@@ -32,13 +32,15 @@
 						<li><%= link_to 'maionese', recipes_path(category: 'maionese') %></li>
 						<li><%= link_to 'brigadeiro', recipes_path(category: 'brigadeiro') %></li>
 						<li><%= link_to 'milho', recipes_path(category: 'milho') %></li> |
-						<li><%= link_to 'categorias', recipes_path(category: 'milho') %></li> 
+						<li><%= link_to 'categorias', categories_path %></li> 
 					</ul>
 				</div>
 
 				<div class="col-md-12">
-					<%= button_to 'Criar Receita', new_recipe_path, 
-					class: 'btn btn-success btn-lg top', method: :get %>
+					<%= button_to new_recipe_path, 
+					class: 'btn btn-success btn-lg top', style: 'border-radius: 25px; background-color: #8bad00 !important; border: 1px solid #8bad00;', method: :get  do %>
+						<i class="fas fa-edit"></i> Criar Receita
+					<% end %>
 				</div>
 			</div>
 		</div>
@@ -51,14 +53,23 @@
 			
 			<% for i in 1..12 %>
 				<div class="col-md-3">
+					 <div style='padding: 5px;'>
+					 		<%= image_tag('avatar.jpg', 
+					 		style: 'width: 44px; height: 44px; display: inline; background-color: #EEE; border-radius: 44px;') %>
+					 		<h5 style='display: inline;'><%= link_to 'Renato Franco' %> Publicou</h5>
+					 </div>
 					 <div class="panel panel-default">
-					 		<div class='jumbotron' style='margin-bottom: 0px; height: 160px; padding: 15px;'>	
+					 		<div class='jumbotron' style="margin-bottom: 0px; height: 160px; padding: 15px; 
+					 		 background-image: url('http://deli.ballabets.com/wp-content/uploads/2015/10/Receita-de-Pudim-de-Tapioca-com-Leite-Condensado.jpg');
+					 		 background-size: cover; background-repeat: no-repeat;">	
 					 			 <%= link_to '', class: 'pull-left', method: :post, remote: true do %>
-										<i class="far fa-heart"></i>
+										<i class="far fa-heart" style='font-size: 30px; position: absolute;
+										 bottom: 180px; color: #FFF;'></i>
 					 			 <% end %>
 
 					 			 <%= link_to '', class: 'pull-right', method: :post, remote: true do %>
-										<i class="far fa-bookmark"></i>
+										<i class="far fa-bookmark", style='font-size: 30px; position: absolute; 
+										bottom: 180px; right: 30px; color: #FFF;'></i>
 					 			 <% end %>
 					 		</div>
 					 		<ul class="list-unstyled" style='padding: 10px;'>
