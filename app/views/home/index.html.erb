@@ -53,12 +53,12 @@
 				<div class="col-md-3">
 					 <div class="panel panel-default">
 					 		<div class='jumbotron' style='margin-bottom: 0px; height: 160px; padding: 15px;'>	
-					 			 <%= link_to '', class: 'pull-left' do %>
-										Save
+					 			 <%= link_to '', class: 'pull-left', method: :post, remote: true do %>
+										<i class="far fa-heart"></i>
 					 			 <% end %>
 
-					 			 <%= link_to '', class: 'pull-right' do %>
-										Bookmark
+					 			 <%= link_to '', class: 'pull-right', method: :post, remote: true do %>
+										<i class="far fa-bookmark"></i>
 					 			 <% end %>
 					 		</div>
 					 		<ul class="list-unstyled" style='padding: 10px;'>
